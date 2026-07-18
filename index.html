@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Sattiw ❤️</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body{
+            /* Latar belakang utama: Merah Maroon */
+            background: linear-gradient(135deg, #5c0011, #900c3f, #c70039);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        .container{
+            text-align: center;
+            animation: fadeMasuk 2.5s ease-out;
+            z-index: 10;
+            max-width: 500px;
+        }
+
+        h1{
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .hati{
+            color: #ffd700;
+            animation: denyut 1.2s infinite ease-in-out;
+            display: inline-block;
+        }
+
+        .foto-kita{
+            width: 240px;
+            max-width: 80%;
+            border-radius: 20px;
+            border: 5px solid rgba(255,255,255,0.3);
+            box-shadow: 0 0 30px rgba(0,0,0,0.4);
+            margin: 15px 0;
+            animation: naikPelan 3s ease-out;
+            object-fit: cover;
+        }
+
+        .tanggal{
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .pesan{
+            font-size: 1.2rem;
+            line-height: 1.9;
+            margin: 20px 0;
+            opacity: 0.97;
+            /* Latar kotak surat: Merah Maroon lembut */
+            background: rgba(92, 0, 17, 0.6);
+            border: 2px solid rgba(255,255,255,0.2);
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .tanda-tangan{
+            font-size: 1.1rem;
+            margin-top: 15px;
+            font-style: italic;
+            color: #ffd700;
+        }
+
+        /* Animasi */
+        @keyframes fadeMasuk {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes denyut {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        @keyframes naikPelan {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Efek kelopak bunga */
+        .kelopak{
+            position: absolute;
+            top: -10%;
+            font-size: 20px;
+            color: #ffb3c1;
+            opacity: 0.6;
+            animation: jatuh linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes jatuh {
+            to{
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function buatKelopak(){
+            const kelopak = document.createElement('div');
+            kelopak.classList.add('kelopak');
+            kelopak.innerHTML = '❀';
+            kelopak.style.left = Math.random() * 100 + '%';
+            kelopak.style.animationDuration = (Math.random() * 5 + 5) + 's';
+            kelopak.style.fontSize = (Math.random() * 15 + 10) + 'px';
+            document.body.appendChild(kelopak);
+            setTimeout(() => kelopak.remove(), 10000);
+        }
+        setInterval(buatKelopak, 400);
+    </script>
+
+    <div class="container">
+        <h1>Halo Sattiw Sygg <span class="hati">💋</span></h1>
+
+        <img src="kita-berdua.jpg" alt="Enzy & Sattiw" class="foto-kita">
+        
+        <div class="tanggal">Welcome to our month 27/28 August ✨</div>
+
+        <div class="pesan">
+            Thank you for everything you give to me.<br><br>
+            In another life, I would always choose you.<br><br>
+            Sorry syg, I’ve made a lot of mistakes 💖
+        </div>
+
+        <div class="tanda-tangan">
+            — Always yours, Enzy ❤️
+        </div>
+    </div>
+</body>
+</html>
