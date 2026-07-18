@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enzy ❤️ Sattiw</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff4b91,#6a11cb);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+animation:fade 2s;
+}
+
+h1{
+font-size:60px;
+}
+
+p{
+font-size:22px;
+margin:20px;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4b91;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.heart{
+position:absolute;
+font-size:25px;
+animation:love 8s linear infinite;
+opacity:.7;
+}
+
+@keyframes love{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>❤️ Enzy × Sattiw ❤️</h1>
+
+<p>
+Every Love Story Is Beautiful,<br>
+But Ours Is My Favorite.
+</p>
+
+<button onclick="alert('I Love You ❤️')">
+Open Our Story
+</button>
+
+</div>
+
+<script>
+
+for(let i=0;i<60;i++){
+
+let h=document.createElement("div");
+
+h.innerHTML="❤️";
+
+h.className="heart";
+
+h.style.left=Math.random()*100+"%";
+
+h.style.animationDuration=(5+Math.random()*5)+"s";
+
+h.style.fontSize=(20+Math.random()*35)+"px";
+
+document.body.appendChild(h);
+
+}
+
+</script>
+
+</body>
+</html>
